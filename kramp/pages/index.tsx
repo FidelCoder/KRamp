@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
    <Ramp />
-   <p>nfnfd</p>
+   <p>kramp</p>
     </>
   )
 }

@@ -11,5 +11,8 @@
   "dependencies": {
     "@biconomy/transak": "^3.0.0",
     "next-pwa": "^5.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.49.0"
   }
 }
