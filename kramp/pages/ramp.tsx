@@ -8,8 +8,8 @@ export default function Ramp() {
 const transak = new Transak('STAGING', {
     walletAddress: "0xA82fb8eF1dcff52FD38a2ce08Fc8A142e1FAA12b",
     userData: {
-      firstName: '',
-      email: '',
+      firstName: 'Nash',
+      email: 'agatenash',
     },
   });
   transak.init();

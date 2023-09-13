@@ -5,11 +5,14 @@ import Header from '../components/Header';
 import { UserProvider } from '../contexts/UserContext';
 import { NotificationProvider } from '../contexts/NotificationContext';
 import { ThemeProvider } from '../contexts/ThemeContext';
+import { AuthProvider } from '../contexts/AuthContext';
 
 
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
+    <AuthProvider>
+
     <ThemeProvider>
 
     <UserProvider>
@@ -22,6 +25,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     </UserProvider>
     </ThemeProvider>
+    </AuthProvider>
 
   );
 }
