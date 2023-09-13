@@ -16,7 +16,6 @@ const transak = new Transak('STAGING', {
     }
 return(
         <>
-        <p>ramp</p>
         <button onClick={onRamp}> BUY CRYPTO</button>
         </>
     )
