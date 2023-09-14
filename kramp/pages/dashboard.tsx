@@ -30,8 +30,8 @@ const DashboardPage: React.FC = () => {
 
     // init the widget
 // use this info for transak package
-const transak = new Transak('STAGING', {
-    walletAddress: "0xA82fb8eF1dcff52FD38a2ce08Fc8A142e1FAA12b",
+const transak = new Transak('PRODUCTION', {
+    walletAddress: "",
     userData: {
       firstName: '',
       email: '',
@@ -101,14 +101,14 @@ const transak = new Transak('STAGING', {
           <button className="bg-green-500 p-4 rounded-md text-white">Receive</button>
         </div>
         {/* Transak Button */}
-        <button onClick={openTransak} className="bg-yellow-500 w-full mt-4 p-4 rounded-md text-white">
+        {/* <button onClick={openTransak} className="bg-yellow-500 w-full mt-4 p-4 rounded-md text-white">
         Buy Crypto
-      </button>
+      </button> */}
 
       <div className="mt-4">
-  <Link href="/history">
+  {/* <Link href="/history">
     <span className="text-blue-400 underline">View Transaction History</span>
-  </Link>
+  </Link> */}
 </div>
 <BottomNav />
 

@@ -9,3 +9,8 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Tailwind classes for our gradient background */
+.bg-nebula {
+  background: linear-gradient(120deg, #240b36, #c06c84, #6f86d6);
+}
