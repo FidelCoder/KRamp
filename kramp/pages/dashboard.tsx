@@ -1,8 +1,10 @@
 // pages/dashboard.tsx
-import { useState } from 'react';
+import { useState, useEffect, } from 'react';
 import Transak from "@biconomy/transak";
 import Link from 'next/link';
 import BottomNav from '../components/BottomNav';
+import { useAuth } from '../contexts/AuthContext';
+import { useRouter } from 'next/router';
 
 
 
@@ -15,8 +17,17 @@ declare global {
 const DashboardPage: React.FC = () => {
      // State for the wallet address
   const [walletAddress, setWalletAddress] = useState<string | null>(null);
+  const router = useRouter();
+  const { isAuthenticated } = useAuth();
 
+  useEffect(() => {
+    if (!isAuthenticated) {
+      router.push('/');  // redirect to login/signup page
+    }
+  }, [isAuthenticated, router]);
   const openTransak = () => {
+    const isMobile = window.innerWidth <= 768;
+
     // init the widget
 // use this info for transak package
 const transak = new Transak('STAGING', {
@@ -25,7 +36,9 @@ const transak = new Transak('STAGING', {
       firstName: '',
       email: '',
     },
-  });
+    // Adjust the width and height for mobile screens
+    widgetHeight: isMobile ? '400px' : '650px',
+    widgetWidth: isMobile ? '300px' : '450px',  });
   transak.init();
     }
 
