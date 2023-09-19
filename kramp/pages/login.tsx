@@ -21,7 +21,7 @@ const LoginPage: React.FC = () => {
         <button className="w-full bg-blue-500 p-2 rounded-md text-white">Login</button>
         <div className="text-center">
         <Link href="/signup" passHref>
-  <span className="cursor-pointer text-blue-400 hover:underline">Don't have an account? Sign Up</span>
+  <span className="cursor-pointer text-blue-400 hover:underline">Dont have an account? Sign Up</span>
 </Link>
 
         </div>
