@@ -5,8 +5,8 @@ import Link from 'next/link';
 import BottomNav from '../components/BottomNav';
 import { useAuth } from '../contexts/AuthContext';
 import { useRouter } from 'next/router';
-
-
+import NFCPaymentComponent from '../components/userpay';
+import NFCConductorComponent from '../components/cond'
 
 declare global {
     interface Window {
@@ -99,6 +99,8 @@ const transak = new Transak('PRODUCTION', {
           
           {/* Receive Button */}
           <button className="bg-green-500 p-4 rounded-md text-white">Receive</button>
+          <NFCPaymentComponent/>
+          <NFCConductorComponent />
         </div>
         {/* Transak Button */}
         {/* <button onClick={openTransak} className="bg-yellow-500 w-full mt-4 p-4 rounded-md text-white">

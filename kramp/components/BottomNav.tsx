@@ -38,7 +38,7 @@ const BottomNav: React.FC = () => {
   const navItems = [
     { name: 'Home', href: '/dashboard', icon: FaHome },
     { name: 'History', href: '/history', icon: FaHistory },
-    { name: 'Buy Crypto', href: '/ramp', icon: FaCoins },
+    { name: 'Buy Crypto', href: '/purchase', icon: FaCoins },
   ];
 
   return (
