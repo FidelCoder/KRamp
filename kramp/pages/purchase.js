@@ -103,13 +103,13 @@ export default function Purchase() {
                 {error && <div className="bg-red-300 text-red-800 p-3 rounded mb-5">{error}</div>}
                 <form onSubmit={handleCheckout}>
                     <div className="mb-5">
-                        <label className="block text-md font-medium mb-2 text-gray-600">Amount (USD)</label>
+                        <label className="block text-md font-medium mb-2 text-gray-600">Amount (ETH)</label>
                         <input 
                             type="number" 
                             value={amount} 
                             onChange={e => setAmount(e.target.value)} 
                             className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-indigo-500 text-gray-800" 
-                            placeholder="e.g. 100"
+                            placeholder="e.g. 0.1"
                             required
                         />
                     </div>
