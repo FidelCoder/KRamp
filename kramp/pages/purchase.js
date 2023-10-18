@@ -30,7 +30,7 @@ export default function Purchase() {
             const response = await axios.post("https://nexusrampbackend.vercel.app/create-checkout-session", dataToSend);
             const session = response.data;
             console.log(session.sessionId)
-            const stripe = window.Stripe('pk_test_51NlyNMAGOm3yDBja9NKHxWAEx7SSiibFogtZ63Vz01LWfD6CtNAMJxfboiUwdxn2NUeDSnWzxkdVULfmjF8sAB7n00ZXTooYZA');
+            const stripe = window.Stripe('pk_live_51NlyNMAGOm3yDBjaMrhsw3NancDH4efjwhoi5irxENmXH71oSUXZ8o1xUgU4pHubszs88xeEPSM6MnHJrlGU26jF00wipQO2J3');
             // const result = await stripe.redirectToCheckout({ sessionId: session.id });
             try {
                 // const result = await stripe.redirectToCheckout({ sessionId: session.id });
