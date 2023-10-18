@@ -54,38 +54,78 @@ export default function Purchase() {
         }
     }
 
-    return (
-        // <div className="min-h-screen bg-red-500 flex justify-center items-center">
+    // return (
+    //     // <div className="min-h-screen bg-red-500 flex justify-center items-center">
 
-        <div className="min-h-screen bg-gray-100 flex justify-center items-center">
-            <div className="bg-white p-8 rounded-lg shadow-md w-96">
-                <h1 className="text-2xl font-bold mb-4">Purchase Crypto</h1>
-                {error && <div className="bg-red-200 text-red-700 p-2 rounded mb-4">{error}</div>}
+    //     <div className="min-h-screen bg-gray-100 flex justify-center items-center">
+    //         <div className="bg-white p-8 rounded-lg shadow-md w-96">
+    //             <h1 className="text-2xl font-bold mb-4">Purchase Crypto</h1>
+    //             {error && <div className="bg-red-200 text-red-700 p-2 rounded mb-4">{error}</div>}
+    //             <form onSubmit={handleCheckout}>
+    //                 <div className="mb-4">
+    //                     <label className="block text-sm font-medium mb-2">Amount (USD)</label>
+    //                     <input 
+    //                         type="number" 
+    //                         value={amount} 
+    //                         onChange={e => setAmount(e.target.value)} 
+    //                         className="w-full p-2 border-2 border-gray-300 bg-black rounded" 
+    //                         placeholder="e.g. 100"
+    //                         required
+    //                     />
+    //                 </div>
+    //                 <div className="mb-4">
+    //                     <label className="block text-sm font-medium mb-2">Wallet Address</label>
+    //                     <input 
+    //                         type="text" 
+    //                         value={walletAddress} 
+    //                         onChange={e => setWalletAddress(e.target.value)} 
+    //                         className="w-full p-2 border-2 border-gray-300 bg-black rounded" 
+    //                         required
+    //                     />
+    //                 </div>
+    //                 <button 
+    //                     type="submit" 
+    //                     className={`w-full p-2 bg-blue-600 text-white rounded ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
+    //                     disabled={loading}
+    //                 >
+    //                     {loading ? 'Processing...' : 'Purchase'}
+    //                 </button>
+    //             </form>
+    //         </div>
+    //     </div>
+    // );
+
+
+    return (
+        <div className="min-h-screen bg-gradient-to-r from-blue-600 to-green-400 flex justify-center items-center">
+            <div className="bg-white p-10 rounded-xl shadow-2xl w-96">
+                <h1 className="text-3xl font-semibold mb-6 text-gray-700">Purchase Crypto</h1>
+                {error && <div className="bg-red-300 text-red-800 p-3 rounded mb-5">{error}</div>}
                 <form onSubmit={handleCheckout}>
-                    <div className="mb-4">
-                        <label className="block text-sm font-medium mb-2">Amount (USD)</label>
+                    <div className="mb-5">
+                        <label className="block text-md font-medium mb-2 text-gray-600">Amount (USD)</label>
                         <input 
                             type="number" 
                             value={amount} 
                             onChange={e => setAmount(e.target.value)} 
-                            className="w-full p-2 border-2 border-gray-300 bg-black rounded" 
+                            className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-indigo-500 text-gray-800" 
                             placeholder="e.g. 100"
                             required
                         />
                     </div>
-                    <div className="mb-4">
-                        <label className="block text-sm font-medium mb-2">Wallet Address</label>
+                    <div className="mb-6">
+                        <label className="block text-md font-medium mb-2 text-gray-600">Wallet Address</label>
                         <input 
                             type="text" 
                             value={walletAddress} 
                             onChange={e => setWalletAddress(e.target.value)} 
-                            className="w-full p-2 border-2 border-gray-300 bg-black rounded" 
+                            className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-indigo-500 text-gray-800" 
                             required
                         />
                     </div>
                     <button 
                         type="submit" 
-                        className={`w-full p-2 bg-blue-600 text-white rounded ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                        className={`w-full p-3 text-lg font-medium bg-indigo-600 hover:bg-indigo-700 text-white rounded transition duration-200 ${loading ? 'opacity-60 cursor-not-allowed' : ''}`}
                         disabled={loading}
                     >
                         {loading ? 'Processing...' : 'Purchase'}
@@ -94,6 +134,7 @@ export default function Purchase() {
             </div>
         </div>
     );
+
 }
 
 
